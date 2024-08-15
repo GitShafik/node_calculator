@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "test:unit": "./node_modules/.bin/jest __tests__/unit"
+    "test:unit": "./node_modules/.bin/jest __tests__/unit",
+    "test:integration": "./node_modules/.bin/jest __tests__/integration"
   },
-  "author": "Patrik Nygren",
+  "author": "Shafik Khan",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.1"
