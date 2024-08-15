@@ -7,7 +7,7 @@ describe("calculator server tests POST", function () {
     request(server)
       .post("/calculator")
       .send(calculation)
-      .expect(200, "7", done);
+      .expect(200, { result: 7 }, done); // Adjusted to match JSON response
   });
 
   it("should return 50 as percentage of 3 and 6 in POST", function (done) {
@@ -15,7 +15,10 @@ describe("calculator server tests POST", function () {
     request(server)
       .post("/calculator")
       .send(calculation)
-      .expect(200, "50", done);
+      .expect(200)
+      .expect("Content-Type", /json/)
+      .expect({ result: 50 })
+      .end(done);
   });
 });
 
