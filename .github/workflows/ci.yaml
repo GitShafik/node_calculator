@@ -1,18 +1,21 @@
 name: CI
 
-#triggers
-on: push
+# Triggers
+on:
+  push:
 
-# what do when triggered
+# What to do when triggered
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       - uses: actions/checkout@v4
-       - name: install dependencies
-       run: npm install
-       - name: unit test
-       run: npm run test:unit
-       - name: integrations test
-       run: npm run test:integration
-       
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Unit test
+        run: npm run test:unit
+
+      - name: Integration test
+        run: npm run test:integration
