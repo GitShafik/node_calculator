@@ -8,7 +8,7 @@ describe("percentage tests", function () {
 
   // Regression tests
   it("should result in 0 when given -1 and 100", function () {
-    expect(percentage(-1, 100)).toBeNaN();
+    expect(percentage(-1, 100)).toBe(-1);
   });
 
   it("should result in Infinity when given 1 and 0", function () {
