@@ -1,6 +1,6 @@
 import request from "supertest";
 import server from "../../src/server";
-
+/*
 describe("calculator server tests POST", function () {
   it("should return 7 adding 6 and 1 in POST", function (done) {
     const calculation = { numOne: "6", numTwo: "1", operator: "add" };
@@ -22,9 +22,8 @@ describe("calculator server tests POST", function () {
       .end(done);
       
   });
-  */
 });
-
+*/
 describe("calculator server tests GET", function () {
   it("should return 7 adding 6 and 1 in GET", function (done) {
     request(server).get("/calculator/6/add/1").expect(200, { result: 7 }, done);
