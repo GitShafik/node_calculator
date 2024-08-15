@@ -4,6 +4,6 @@ describe("numberCruncher integration tests", function () {
   it("should return 33.3 given 3 and 9", function () {
     const calcObject = { numOne: 3, numTwo: 9, operator: "percentage" };
     const result = numberCruncher(calcObject);
-    expect(result).toBe(33);
+    expect(result).toBe(33.33333333333333);
   });
 });
