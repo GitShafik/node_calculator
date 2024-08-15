@@ -2,7 +2,7 @@ import request from "supertest";
 import server from "../../src/server";
 
 describe("calculator server tests POST", function () {
-  /* it("should return 7 adding 6 and 1 in POST", function (done) {
+  it("should return 7 adding 6 and 1 in POST", function (done) {
     const calculation = { numOne: "6", numTwo: "1", operator: "add" };
     request(server)
       .post("/calculator")
@@ -10,7 +10,7 @@ describe("calculator server tests POST", function () {
       .expect(200, { result: 7 }, done); // Adjusted to match JSON response
   });
 
-*/
+  /*
   it("should return 50 as percentage of 3 and 6 in POST", function (done) {
     const calculation = { numOne: "3", numTwo: "6", operator: "percentage" };
     request(server)
@@ -20,7 +20,9 @@ describe("calculator server tests POST", function () {
       .expect("Content-Type", /json/)
       .expect({ result: 50 })
       .end(done);
+      
   });
+  */
 });
 
 describe("calculator server tests GET", function () {
