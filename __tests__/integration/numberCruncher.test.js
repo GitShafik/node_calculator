@@ -1,5 +1,4 @@
 import numberCruncher from "../../src/modules/calculation/numberCruncher";
-
 describe("numberCruncher integration tests", function () {
   // Functional test
   it("should return 33.3 given 3 and 9", function () {
