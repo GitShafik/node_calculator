@@ -1,5 +1,7 @@
 import exp from "../../src/modules/calculation/util/exp";
 
+// commenting for test.
+
 describe("exp function", () => {
   test("calculates positive integer powers", () => {
     expect(exp(2, 3)).toBe(8); // 2^3 = 8
