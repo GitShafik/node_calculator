@@ -1,6 +1,6 @@
 import exp from "../../src/modules/calculation/util/exp";
 
-// commenting for test.
+// commenting for test. test.
 
 describe("exp function", () => {
   test("calculates positive integer powers", () => {
