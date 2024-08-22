@@ -3,7 +3,7 @@ name: Ci
 # Triggers
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
   workflow_dispatch:
 
 # What to do when triggered
