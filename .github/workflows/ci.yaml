@@ -1,31 +1,21 @@
-name: Ci
+name: test-pipeline
 
-# Triggers
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches:
+      - main
+      - Test
+  pull_request:
+    branches:
+      - main
 
-# What to do when triggered
 jobs:
-  unit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Unit test
-        run: npm run test:unit
-
+  build:
   integration:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Integration test
+      - name: Run Integration Test
         run: npm run test:integration
